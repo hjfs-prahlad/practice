@@ -1,0 +1,30 @@
+-- Creating FirstFunction
+create or replace FUNCTION FIRSTFUNCTION 
+RETURN NUMBER
+IS
+    NUM1 NUMBER;
+    NUM2 NUMBER;
+BEGIN 
+    NUM1 := 10;
+    NUM2 := 20;
+    RETURN NUM1 + NUM2;
+END;
+
+--Creating Function that call another function
+
+create or replace FUNCTION FUNCTIONCALL_ANOTHER_FUNCTION 
+(
+  PARAM1 NUMBER 
+, PARAM2 NUMBER 
+) 
+RETURN NUMBER 
+AS 
+BEGIN 
+    RETURN FIRSTFUNCTION*PARAM1*PARAM2;
+END FUNCTIONCALL_ANOTHER_FUNCTION;
+
+-- testing both function
+
+select FIRSTFUNCTION() FROM dual;
+
+select FUNCTIONCALL_ANOTHER_FUNCTION(&PARAM1, &PARAM2) FROM dual;
