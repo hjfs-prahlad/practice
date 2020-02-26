@@ -1,0 +1,26 @@
+package com.day1;
+
+interface One
+{
+	
+	static void show()
+	{
+		
+	}
+}
+interface Two extends One
+{
+	static void show()
+	{
+		
+	}
+}
+public class StaticExampleForThreeLevelInmplementation 
+{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

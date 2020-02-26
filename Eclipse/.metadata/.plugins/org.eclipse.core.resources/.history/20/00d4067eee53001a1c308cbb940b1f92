@@ -1,0 +1,32 @@
+package com.day1;
+
+interface FirstInterface
+{
+	void display1();
+}
+interface SecondInterface extends FirstInterface
+{
+	void display2();
+}
+public class WithoutLambda implements SecondInterface
+{
+	
+	public static void main(String[] args)
+	{
+		WithoutLambda wl = new WithoutLambda();
+		wl.display1();
+		wl.display2();
+	}
+
+	@Override
+	public void display1() 
+	{
+		System.out.println("inside display1");
+	}
+
+	@Override
+	public void display2() 
+	{
+		System.out.println("inside display2");
+	}
+}

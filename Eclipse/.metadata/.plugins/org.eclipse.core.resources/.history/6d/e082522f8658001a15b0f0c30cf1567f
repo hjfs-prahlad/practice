@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            Welcome to signup page
+        </title>
+    </head>
+    <body> 
+        <marquee><h3> Welcome to FSD Signup Page </h3> </marquee> 
+        <form>
+        <table align = "center">
+            <br>               
+                <td><h2>Create a new account</h2></td>
+            </tr>
+            <tr>
+                <td><h3>It's free and always will be.</h3></td> 
+            </tr>
+            <tr>
+              <td> First Name</td>
+              <td> <input type="text" id="fname" name="fname" required></td>
+            </tr>
+            <tr>
+              <td>Last Name</td>
+              <td> <input type="text" id="lname" name="lname" required></td>
+            </tr>
+            <tr>
+              <td>Password</td>
+              <td> <input type="password" id="pass" name="pass"required></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td> <select id="fgender" name="fgender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                  </select></td>
+            </tr>
+            <tr>
+                <td> Date of Birth </td>
+                <td> <input type="date" name="fdob"> </td>
+            </tr>
+            <tr>
+                <td rowspan="2"> <input type = "submit" value="    Sign Up    " name = "fsignup">
+            </tr>
+          </table>
+          </form>
+    </body>
+</html>

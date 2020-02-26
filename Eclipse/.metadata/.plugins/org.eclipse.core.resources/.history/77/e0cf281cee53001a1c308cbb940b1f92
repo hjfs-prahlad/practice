@@ -1,0 +1,18 @@
+package com.day1;
+
+interface FirstInterface
+{
+	void display1();
+}
+interface SecondInterface
+{
+	void display2();
+}
+public class WithoutLambda {
+
+	public static void main(String[] args)
+	{
+		
+	}
+
+}

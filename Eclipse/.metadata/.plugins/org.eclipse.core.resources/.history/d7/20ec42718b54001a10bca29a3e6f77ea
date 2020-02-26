@@ -1,0 +1,20 @@
+package com.factorydesignpattern;
+
+public class PenFactory 
+{
+	public Pen getInstances(String str)
+	{
+		if(str.equals("Premium"))
+		{
+			return new Parker();
+		}
+		else if(str.equals("gel"))
+		{
+			return new Reynold();
+		}
+		else
+		{
+			return new Lexi();
+		}
+	}
+}

@@ -1,0 +1,96 @@
+package com.signuppage;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/Signup")
+public class Signup extends HttpServlet 
+{
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		PrintWriter out = response.getWriter();
+		out.println("<html>
+    <head>
+        <title>
+            Welcome to signup page
+        </title>
+    </head>
+    <body> 
+        <marquee><h3> Welcome to FSD Signup Page </h3> </marquee> 
+        <form>
+        <table align = "center">
+            <br>               
+                <td><h2>Create a new account</h2></td>
+            </tr>
+            <tr>
+                <td><h3>It's free and always will be.</h3></td> 
+            </tr>
+            <tr>
+              <td> First Name</td>
+              <td> <input type="text" id="fname" name="fname" required></td>
+            </tr>
+            <tr>
+              <td>Last Name</td>
+              <td> <input type="text" id="lname" name="lname" required></td>
+            </tr>
+            <tr>
+              <td>Password</td>
+              <td> <input type="password" id="pass" name="pass"required></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td> <select id="fgender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                  </select></td>
+            </tr>
+            <tr>
+                <td> Date of Birth </td>
+                <td> <input type="date"> </td>
+            </tr>
+            <tr>
+                <td rowspan="2"> <input type = "submit" value="    Sign Up    " name = "fsignup">
+            </tr>
+          </table>
+          </form>
+    </body>
+</html>");
+		String fnameDB = request.getParameter("fname");
+		String lnameDB = request.getParameter("lname");
+		String passDB = request.getParameter("pass");
+		String genderDB = request.getParameter("fgender");
+		String dobDB = request.getParameter("fdob");
+		insertDB(fnameDB,lnameDB,passDB,genderDB,dobDB);
+		response.getWriter().println("User Saved!");
+	}
+
+	public void insertDB(String fnameDB, String lnameDB, String passDB, String genderDB, String dobDB)
+	{
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Connection connection = DriverManager.getConnection(
+					"jdbc:oracle:thin:@localhost:1521:xe", "hr", "tiger");
+			Statement statement = connection.createStatement();
+			int status = statement.executeUpdate("insert into SIGNUP values ('" + fnameDB + "','" + lnameDB + "','" + passDB + "','" + genderDB + "','" + dobDB + "')");
+			if (status == 1) {
+				System.out.println("Record Inserted!");
+			}
+		} catch (ClassNotFoundException e) {
+			System.out.println(e);
+		} catch (SQLException e) {
+			System.out.println(e);
+		}
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.factorydesignpattern;
+
+public class PenFactory 
+{
+	void getInstance()
+	{
+		if()
+	}
+	
+}

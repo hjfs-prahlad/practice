@@ -1,0 +1,23 @@
+package designpattern;
+
+public class SingletonEx
+{
+	// Single to n
+		// Step 1: Create a private static variable of the class.
+	private static final SingletonEx INSTANCE = new  SingletonEx();
+	
+		//Create private constructor
+		private SingletonEx()
+		{
+			
+		}
+		
+		// having accessor to access instance
+		
+		public static SingletonEx getInstance()
+		{
+			return SingletonEx;
+		}
+		
+	
+}

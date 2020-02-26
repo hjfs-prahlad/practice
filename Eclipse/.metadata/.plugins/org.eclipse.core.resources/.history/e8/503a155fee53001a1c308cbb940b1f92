@@ -1,0 +1,33 @@
+package com.day1;
+
+interface FirstInterface
+{
+	void display1();
+}
+interface SecondInterface extends FirstInterface
+{
+	void display2();
+}
+public class WithoutLambda implements SecondInterface
+{
+	
+	public static void main(String[] args)
+	{
+		WithoutLambda wl = new WithoutLambda();
+		wl.display1();
+		w2.display2();
+	}
+
+	@Override
+	public void display1() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void display2() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

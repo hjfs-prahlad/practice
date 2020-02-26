@@ -1,0 +1,11 @@
+package com.factorydesignpattern;
+
+public class PenFactory 
+{
+	public PenFactory getInstance(String str)
+	{
+		if(str.equals("premium"))
+				return new Parker();
+	}
+	
+}

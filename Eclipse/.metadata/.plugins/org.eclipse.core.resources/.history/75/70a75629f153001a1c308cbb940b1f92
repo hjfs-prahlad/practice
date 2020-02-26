@@ -1,0 +1,14 @@
+package com.day1;
+interface WFirst
+{
+	void display();
+}
+
+public class WithLambda implements WFirst 
+{
+
+	public static void main(String[] args) {
+
+	}
+
+}

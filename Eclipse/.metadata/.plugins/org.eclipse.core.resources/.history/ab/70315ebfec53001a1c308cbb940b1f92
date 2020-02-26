@@ -1,0 +1,27 @@
+package com.day1;
+
+interface One
+{
+	
+	static void show()
+	{
+		System.out.println("One");
+	}
+}
+interface Two extends One
+{
+	static void show()
+	{
+		System.out.println("Two");
+	}
+}
+public class StaticExampleForThreeLevelInmplementation implements Two
+{
+
+	public static void main(String[] args) {
+		StaticExampleForThreeLevelInmplementation s = new StaticExampleForThreeLevelInmplementation();
+		s.show();
+
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.factorydesignpattern;
+
+public class Reynold implements Pen
+{
+
+	@Override
+	public void penType() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

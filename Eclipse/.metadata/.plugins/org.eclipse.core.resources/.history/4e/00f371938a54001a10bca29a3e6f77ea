@@ -1,0 +1,8 @@
+package com.factorydesignpattern;
+
+public class PenFactory 
+{
+	public PenFactory() 
+	{
+	}
+}

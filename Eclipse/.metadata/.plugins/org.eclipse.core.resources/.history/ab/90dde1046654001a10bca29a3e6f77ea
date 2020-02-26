@@ -1,0 +1,12 @@
+package designpattern;
+
+public class AppText {
+
+	public static void main(String[] args) 
+	{
+//		SingletonEx ex = new SingletonEx();
+		SingletonEx ins1 = SingletonEx.getInstance();
+		SingletonEX ins2 = SingletonEx.getInstance();
+	}
+
+}

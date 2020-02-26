@@ -1,0 +1,14 @@
+package com.day1;
+
+interface Test1
+{
+	void run();
+}
+
+public class FirstProgram 
+{
+	public static void main(String[] args) 
+	{
+		Test1 t1 = () -> System.out.println("runny");
+		};	
+	}

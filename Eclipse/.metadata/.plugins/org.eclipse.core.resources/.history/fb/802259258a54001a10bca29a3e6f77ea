@@ -1,0 +1,10 @@
+package com.factorydesignpattern;
+
+public class PenMain {
+
+	public static void main(String[] args) 
+	{
+		Pen pd = new Pen();
+	}
+
+}

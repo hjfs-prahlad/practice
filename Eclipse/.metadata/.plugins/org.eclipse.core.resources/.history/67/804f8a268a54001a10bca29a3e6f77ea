@@ -1,0 +1,13 @@
+package com.factorydesignpattern;
+
+public class PenMain {
+
+	public static void main(String[] args) 
+	{
+		PenFactory pd = new PenFactory();
+		Pen p = pd.getInstance("premium");
+		p.penType();
+		
+	}
+
+}

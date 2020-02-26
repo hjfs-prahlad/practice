@@ -1,0 +1,17 @@
+package com.day1;
+
+public class RunnableDemoWithConcreteClass {
+
+	public static void main(String[] args) 
+	{
+		Thread t1 = new Thread(new runnable() { void run()
+			{
+				for(int i = 0; i<5;i++)
+				{
+					System.out.println(i);
+				}
+			})t1.run();
+			};
+	}
+
+}

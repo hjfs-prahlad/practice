@@ -1,0 +1,13 @@
+package com.day1;
+interface WFirst
+{
+	void display();
+}
+
+public class WithLambda {
+
+	public static void main(String[] args) {
+
+	}
+
+}

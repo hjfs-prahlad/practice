@@ -1,0 +1,23 @@
+package com.singleton;
+
+class EagerIntialiazedSingleton1 
+{
+	private static final EagerIntialiazedSingleton1 INSTANCE = new EagerIntialiazedSingleton1();
+	
+	private EagerIntialiazedSingleton1()
+	{
+		
+	}
+	
+	public static EagerIntialiazedSingleton1 getInstance()
+	{
+		return INSTANCE;
+	}
+	
+}
+public class EagerIntialiazedSingleton
+{
+	EagerIntialiazedSingleton1 er = EagerIntialiazedSingleton1.getInstance();
+	
+}
+
